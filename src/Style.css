@@ -1,0 +1,118 @@
+*{
+    -fx-color-primary:#007CA6;
+    -fx-color-second: #F3C026;
+    -fx-color-third: #0096C9;
+    -fx-color-fourth: #087295;
+    -fx-color-fifth: #169DC9;
+    -fx-color-loading: #00AEE8;
+    -fx-color-yellow:#FAB700;
+    -fx-color-close: #E81123;
+}
+
+.butt{
+    -fx-background-color: -fx-color-primary;
+    -fx-border-color: white;
+    -fx-border-radius:3px;
+    -fx-text-fill: white;
+}
+
+.mini-bootoon{
+    -fx-background-color:-fx-color-second; 
+    -fx-text-fill: white;
+}
+
+.labell{
+    -fx-text-fill: -fx-color-third;
+}
+
+.minibutt{
+  -fx-background-color: -fx-color-fourth;
+    -fx-border-color: white;
+    -fx-text-fill: white;   
+}
+
+.panu{
+    -fx-background-color: linear-gradient(to top, #f3b500, #ffb900);
+}
+
+.minibutt:hover{
+   -fx-background-color: white;
+    -fx-border-color: -fx-color-fourth;
+    -fx-text-fill: -fx-color-fourth;   
+}
+
+.browse{
+    -fx-background-color: -fx-color-primary;
+    -fx-border-color: white;
+    -fx-border-radius:3px;
+    -fx-text-fill: white;  
+}
+
+.browse:hover{
+   -fx-background-color: white;
+    -fx-border-color: -fx-color-fifth;
+    -fx-text-fill: -fx-color-fifth;  
+ 
+}
+
+.labelo{
+    -fx-text-fill: #F0F0F0;
+}
+
+.butt:hover {
+    -fx-background-color: white;
+    -fx-border-color: -fx-color-third;
+    -fx-text-fill: -fx-color-third;
+}
+
+.close {
+    -fx-text-weight: 2px;
+    -fx-background-radius: 3em;
+    -fx-background-color: -fx-color-third;
+    -fx-text-fill: white;
+}
+.close:hover{
+    -fx-background-color: -fx-color-close;
+    -fx-text-fill:white;
+}
+.help{
+    -fx-background-radius: 3em;
+    -fx-background-color:-fx-color-third;
+    -fx-text-fill:white;
+}
+.help:hover{
+    -fx-background-color:white;
+    -fx-text-fill:-fx-color-third;
+}
+.gradpane{
+    -fx-background-color: linear-gradient(to top,#C2950C,#F4C946);
+}
+.bluepane{
+    -fx-background-color: -fx-color-primary;
+    -fx-border-radius:5px;
+}
+ 
+ .loading{
+     -fx-background-color:#00AEE8;
+ }
+.yellow{
+    -fx-background-color:  -fx-color-yellow;
+    -fx-border-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-border-radius:10px;
+}
+
+.yellow_mini{
+    -fx-background-color:  -fx-color-yellow;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+}
+
+.transparent-progress-bar > .bar,.transparent-progress-bar:indeterminate .bar{
+	-fx-accent:#0080E8;
+}
+
+.transpane{
+    -fx-background-color:transparent;
+}

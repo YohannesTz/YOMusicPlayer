@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="mainpane" prefHeight="604.0" prefWidth="1354.0" style="-fx-background-radius: 1.2em; " styleClass="main-pane" stylesheets="@Dark_Style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLDocumentController">
+   <children>
+      <AnchorPane fx:id="pane" layoutX="804.0" layoutY="3.0" prefHeight="586.0" prefWidth="504.0" styleClass="bluepane" AnchorPane.leftAnchor="804.0" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="3.0">
+         <effect>
+            <DropShadow height="35.78" radius="15.1175" width="26.69" />
+         </effect>
+         <children>
+            <ListView fx:id="music_listviw" layoutX="14.0" layoutY="14.0" prefHeight="586.0" prefWidth="504.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="manepane" layoutX="14.0" layoutY="3.0" prefHeight="586.0" prefWidth="772.0" styleClass="bluepane" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="580.0" AnchorPane.topAnchor="3.0">
+         <children>
+            <AnchorPane fx:id="highgraphics" layoutX="-1.0" layoutY="187.0" prefHeight="403.0" prefWidth="760.0" style="-fx-background-color: white;" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <BarChart id="visualizer" fx:id="visualizer" alternativeRowFillVisible="false" animated="false" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" legendVisible="false" prefHeight="403.0" prefWidth="760.0" verticalGridLinesVisible="false" verticalZeroLineVisible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <xAxis>
+                      <CategoryAxis fx:id="catagoryAxis" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="NumberAxis" minorTickVisible="false" side="LEFT" tickLabelsVisible="false" tickMarkVisible="false" />
+                    </yAxis>
+                  </BarChart>
+                  <HBox layoutX="38.0" layoutY="319.0" prefHeight="14.0" prefWidth="684.0" spacing="3.0">
+                     <children>
+                        <Button fx:id="play" onAction="#handleplay" prefHeight="35.0" prefWidth="88.0" styleClass="butt" text="Play">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Image/Play.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <JFXSlider fx:id="musicSlider" prefHeight="14.0" prefWidth="422.0">
+              </JFXSlider>
+                           </children>
+                        </VBox>
+                        <Button fx:id="stop1" onAction="#handleStop" prefHeight="35.0" prefWidth="88.0" styleClass="butt" text="   Stop">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Image/icons8_Stop_50px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <HBox spacing="2.0">
+                           <children>
+                              <Button fx:id="previous" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" styleClass="butt">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons8_Previous_50px_1.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="next" mnemonicParsing="false" prefHeight="35.0" prefWidth="36.0" styleClass="butt">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons8_Next_50px_2.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Label fx:id="time" layoutX="445.0" layoutY="294.0" prefHeight="25.0" prefWidth="98.0" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="time1" layoutX="455.0" layoutY="304.0" prefHeight="25.0" prefWidth="98.0" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="yellow" layoutY="6.0" prefHeight="174.0" prefWidth="760.0" styleClass="yellow" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="6.0">
+               <children>
+                  <ImageView fitHeight="56.0" fitWidth="46.0" layoutX="170.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/music.png" />
+                     </image>
+                     <effect>
+                        <Reflection bottomOpacity="0.14" fraction="0.93" />
+                     </effect>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="32.0" layoutX="51.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="51.0" AnchorPane.topAnchor="130.0">
+                     <image>
+                        <Image url="@Image/icons8_Audio_Wave2_64px.png" />
+                     </image>
+                  </ImageView>
+                  <HBox layoutX="656.0" layoutY="4.0" spacing="2.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleHelp" prefHeight="25.0" prefWidth="17.0" style="-fx-background-radius: 3em;" styleClass="help" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Image/icons8_Settings_25px_1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleHelp" prefHeight="25.0" prefWidth="27.0" style="-fx-background-radius: 3em;" styleClass="help" text="?" textFill="WHITE" />
+                        <Button fx:id="close1" mnemonicParsing="false" onAction="#handleClose" prefHeight="25.0" prefWidth="29.0" style="-fx-background-radius: 3em;" styleClass="close" text="X" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Bell MT" size="10.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <JFXToggleButton fx:id="toggle" layoutX="76.0" layoutY="115.0" onAction="#handleMini" selected="true" text="High Graphics" textFill="WHITE" toggleColor="#6f6b6b" toggleLineColor="#cdcdcd" AnchorPane.topAnchor="115.0" />
+                  <ImageView fitHeight="25.0" fitWidth="32.0" layoutX="51.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="51.0" AnchorPane.topAnchor="87.0">
+                     <image>
+                        <Image url="@Image/icons8_Compress_100px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXToggleButton fx:id="butn" disable="true" layoutX="76.0" layoutY="71.0" onAction="#handleVisualise" text="MusicsList" textFill="WHITE" toggleColor="#6f6b6b" toggleLineColor="#cdcdcd">
+                  </JFXToggleButton>
+                  <Label fx:id="playTime" layoutX="240.0" layoutY="128.0" prefHeight="31.0" prefWidth="504.0" textFill="WHITE">
+                     <font>
+                        <Font name="Britannic Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="212.0" layoutY="7.0" prefHeight="41.0" prefWidth="288.0" text="YoMusicPlayer" textFill="#108cb2">
+                     <font>
+                        <Font name="AbnetZeSematate Bold" size="34.0" />
+                     </font>
+                     <effect>
+                        <Reflection bottomOpacity="0.17" fraction="1.0" topOffset="-1.0" topOpacity="0.64" />
+                     </effect>
+                  </Label>
+                  <Label layoutX="199.0" layoutY="130.0" prefHeight="30.0" prefWidth="540.0" textFill="WHITE">
+                     <font>
+                        <Font name="AbnetZeSematate Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXToggleButton fx:id="auto_play" layoutX="240.0" layoutY="71.0" prefHeight="56.0" prefWidth="143.0" text="Replay" textFill="WHITE" toggleColor="#6f6b6b" toggleLineColor="#cdcdcd" />
+               </children>
+            </AnchorPane>
+            <Label fx:id="album" layoutX="402.0" layoutY="416.0" prefHeight="27.0" prefWidth="272.0" textFill="YELLOW" AnchorPane.leftAnchor="394.0" AnchorPane.topAnchor="416.0">
+               <font>
+                  <Font name="High Tower Text" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="songbage" fitHeight="276.0" fitWidth="272.0" layoutX="49.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <DropShadow radius="13.7075" width="35.83" />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="32.0" layoutX="692.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/icons8_Sound_50px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="419.0" layoutY="243.0" prefHeight="30.0" prefWidth="98.0" text="Song Title" textFill="WHITE" AnchorPane.leftAnchor="419.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="424.0" layoutY="308.0" prefHeight="30.0" prefWidth="128.0" text="Artist(Band)" textFill="WHITE" AnchorPane.leftAnchor="424.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="433.0" layoutY="379.0" prefHeight="30.0" prefWidth="98.0" text="Album" textFill="WHITE" AnchorPane.leftAnchor="421.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="404.0" layoutY="428.0" prefHeight="30.0" prefWidth="253.0" textFill="WHITE" AnchorPane.leftAnchor="404.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="artist" layoutX="394.0" layoutY="345.0" prefHeight="30.0" prefWidth="272.0" textFill="YELLOW" AnchorPane.leftAnchor="394.0" AnchorPane.topAnchor="345.0">
+               <font>
+                  <Font name="High Tower Text" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="title" layoutX="394.0" layoutY="272.0" prefHeight="30.0" prefWidth="288.0" textFill="YELLOW" AnchorPane.leftAnchor="394.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="32.0" layoutX="394.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="394.0">
+               <image>
+                  <Image url="@Image/icons8_Metal_Music_48px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="32.0" layoutX="405.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="394.0">
+               <image>
+                  <Image url="@Image/icons8_Drum_Set_50px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="32.0" layoutX="405.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="394.0">
+               <image>
+                  <Image url="@Image/icons8_Sheet_Music_50px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="691.0" layoutY="452.0" text="Vol" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="browse" layoutX="422.0" layoutY="197.0" prefHeight="35.0" prefWidth="230.0">
+               <children>
+                  <Button layoutX="143.0" onAction="#handlebrowsebutton" prefHeight="35.0" prefWidth="98.0" styleClass="browse" text="   Browse">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/icons8_Music_Folder_48px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="music_fol_chsr" layoutX="28.0" prefHeight="35.0" prefWidth="114.0" styleClass="browse" text="Music folder">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/icons8_Music_Folder_48px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <JFXSlider fx:id="volumer" indicatorPosition="RIGHT" layoutX="698.0" layoutY="267.0" orientation="VERTICAL">
+            </JFXSlider>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
